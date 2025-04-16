@@ -23,6 +23,8 @@ function startBot() {
 	bot.use(session());
 	bot.use(stage.middleware());
 
+  bot.command('/start', (ctx) => ctx.scene.enter("startScene"))
+
 	bot.start((ctx) => ctx.scene.enter("startScene"));
 
 	bot.launch();

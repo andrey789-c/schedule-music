@@ -32,6 +32,7 @@ confirmScene.enter(async (ctx) => {
   })
 
 
+  ctx.sendMessage(`Новая запись! ${firstName} ${lastName}, ${phone}, ${lessonType}, ${lessonMode === 'with_teacher' ? 'с преподователем' : 'без преподавателя'}, ${date}, ${time}:00`)
 	ctx.reply(
 		`Готово! Вы записаны на ${lessonType} ${date} в ${time}\nФормат: ${subscriptionCount} занятие(й)\nСпасибо!`
 	);

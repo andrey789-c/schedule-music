@@ -6,6 +6,8 @@ const startScene = new Scenes.BaseScene('startScene');
 
 startScene.enter((ctx) => {
   ctx.reply('Привет! Выбери тип занятия:', generateLessonTypeKeyboard());
+
+  
 });
 
 startScene.on('callback_query', async (ctx) => {
